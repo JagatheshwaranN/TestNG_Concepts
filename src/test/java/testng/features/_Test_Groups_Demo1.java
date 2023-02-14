@@ -2,6 +2,20 @@ package testng.features;
 
 import org.testng.annotations.Test;
 
+/**
+ * "Groups" - TestNG allows you to perform sophisticated groupings of test
+ * methods. Not only can you declare that methods belong to groups, but you can
+ * also specify groups that contain other groups.
+ * 
+ * Groups are specified in your testng.xml file and can be found either under
+ * the <test> or <suite> tag. Groups specified in the <suite> tag apply to all
+ * the <test> tags underneath. Note that groups are accumulative in these tags:
+ * if you specify group "a" in <suite> and "b" in <test>, then both "a" and "b"
+ * will be included.
+ * 
+ * @author Jagatheshwaran N
+ *
+ */
 public class _Test_Groups_Demo1 {
 
 	@Test(groups = "functional")
