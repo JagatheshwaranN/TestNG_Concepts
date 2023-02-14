@@ -2,6 +2,7 @@ package testng.listener;
 
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 
 /**
  * "ITestListener" - Classes implement the interface org.testng.ITestListener
@@ -14,13 +15,16 @@ public class CustomListener implements ITestListener {
 
 	public void onTestSuccess(ITestResult result) {
 		System.out.println("Capture the details of PASSED test case ==> " + result.getName());
+		Reporter.log("Capture the details of PASSED test case ==> " + result.getName());
 	}
 
 	public void onTestFailure(ITestResult result) {
 		System.out.println("Capture the details of FAILED test case ==> " + result.getName());
+		Reporter.log("Capture the details of FAILED test case ==> " + result.getName());
 	}
 
 	public void onTestSkipped(ITestResult result) {
 		System.out.println("Capture the details of SKIPPED test case ==> " + result.getName());
+		Reporter.log("Capture the details of SKIPPED test case ==> " + result.getName());
 	}
 }

@@ -4,7 +4,7 @@
 	<listeners>
 		<listener class-name="testng.listener.CustomListener"></listener>
 	</listeners>
-	<test thread-count="5" name="Group Test1">
+	<test thread-count="5" name="Listener Test">
 		<classes>
 			<class name="testng.listener.ListenerTestDemo" />
 		</classes>
