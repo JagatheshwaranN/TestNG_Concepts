@@ -4,8 +4,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 /**
- * Assertions in TestNG are a way to verify that the expected result and the
- * actual result matched or not.
+ * "Assert" - Assertions in TestNG are a way to verify that the expected result
+ * and the actual result matched or not.
  * 
  * Hard assertions will fail the test case and halt the program execution.
  * 

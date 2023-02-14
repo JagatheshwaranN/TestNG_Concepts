@@ -7,11 +7,11 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 /**
- * @BeforeTest - The annotated method will be run before any test method
- *             belonging to the class/es inside the @Test tag is run.
+ * "BeforeTest" - The annotated method will be run before any test method
+ * belonging to the class/es inside the @Test tag is run.
  * 
- * @AfterTest - The annotated method will be run after all the test methods
- *            belonging to the class/es inside the @Test tag have run.
+ * "AfterTest" - The annotated method will be run after all the test methods
+ * belonging to the class/es inside the @Test tag have run.
  * 
  * @author Jagatheshwaran N
  */

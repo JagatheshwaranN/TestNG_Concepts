@@ -3,7 +3,7 @@ package testng.features;
 import org.testng.annotations.Test;
 
 /**
- * @Test - Marks a class or a method as a part of the test.
+ * "Test"- Marks a class or a method as a part of the test.
  * 
  * @author Jagatheshwaran N
  */

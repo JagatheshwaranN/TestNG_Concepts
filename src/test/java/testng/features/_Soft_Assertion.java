@@ -4,12 +4,10 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 /**
- * Assertions in TestNG are a way to verify that the expected result and the
- * actual result matched or not.
- * 
- * Soft assertions will cpature the failed test cases and move with the next
- * code execution. It will not halt the program execution and report all the
- * captured failed test cases after the completion of program execution.
+ * "SoftAssert" - Soft assertions will cpature the failed test cases and move
+ * with the next code execution. It will not halt the program execution and
+ * report all the captured failed test cases after the completion of program
+ * execution.
  * 
  * @author Jagatheshwaran N
  */

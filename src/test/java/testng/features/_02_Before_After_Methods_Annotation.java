@@ -5,9 +5,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 /**
- * @BeforeMethod - The annotated method will be run before each test method.
+ * "BeforeMethod" - The annotated method will be run before each test method.
  * 
- * @AfterMethod - The annotated method will be run after each test method.
+ * "AfterMethod" - The annotated method will be run after each test method.
  * 
  * @author Jagatheshwaran N
  */
