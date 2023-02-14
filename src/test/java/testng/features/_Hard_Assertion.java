@@ -3,7 +3,15 @@ package testng.features;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class _Assertion {
+/**
+ * Assertions in TestNG are a way to verify that the expected result and the
+ * actual result matched or not.
+ * 
+ * Hard assertions will fail the test case and halt the program execution.
+ * 
+ * @author Jagatheshwaran N
+ */
+public class _Hard_Assertion {
 
 	@Test
 	public void verifyStringAssertion() {
