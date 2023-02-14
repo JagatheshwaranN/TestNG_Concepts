@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-	<test thread-count="5" name="Test_Annotation Test">
-		<classes>
-			<class name="testng.features._01_Test_Annotation" />
-		</classes>
-	</test>
-	<test thread-count="5" name="Before_After_Methods_Annotation Test">
-		<classes>
-			<class
-				name="testng.features._02_Before_After_Methods_Annotation" />
-		</classes>
-	</test>
 	<test thread-count="5" name="Before_After_Tests_Annotation Test">
 		<classes>
-			<class name="testng.features._03_Before_After_Tests_Annotation" />
+			<class name="testng.features._06_Before_After_Suites_Annotation" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
