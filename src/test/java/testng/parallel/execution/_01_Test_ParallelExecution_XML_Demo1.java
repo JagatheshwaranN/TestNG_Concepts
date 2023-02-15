@@ -13,9 +13,8 @@ import org.testng.annotations.Test;
  * advantage of TestNG using as many threads as possible to run your tests.
  * 
  * @author Jagatheshwaran N
- *
  */
-public class Test_ParallelExecution_Demo {
+public class _01_Test_ParallelExecution_XML_Demo1 {
 
 	@Parameters({ "user" })
 	@Test
