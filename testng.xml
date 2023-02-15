@@ -3,7 +3,8 @@
 <suite name="Suite">
 	<test thread-count="5" name="Before_After_Tests_Annotation Test">
 		<classes>
-			<class name="testng.features._06_Before_After_Suites_Annotation" />
+			<class
+				name="testng.features._06_Before_After_Suites_Annotation" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

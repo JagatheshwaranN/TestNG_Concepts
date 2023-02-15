@@ -8,10 +8,10 @@ import org.testng.annotations.Test;
  * before the dependent test case run. All the methods you depend on must have
  * run and succeeded for you to run.
  * 
- * Soft Dependency, You will always be run after the methods you depend on, even
- * if some of them have failed. This is useful when you just want to make sure
- * that your test methods are run in a certain order but their success doesn't
- * really depend on the success of others.
+ * Soft Dependency, Your test will always be run after the methods your test
+ * depend on, even if some of them have failed. This is useful when you just
+ * want to make sure that your test methods are run in a certain order but their
+ * success doesn't really depend on the success of others.
  * 
  * A soft dependency is obtained by adding "alwaysRun=true" in your @Test
  * annotation.
