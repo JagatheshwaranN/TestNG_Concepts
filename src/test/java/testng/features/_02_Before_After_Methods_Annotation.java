@@ -22,6 +22,11 @@ public class _02_Before_After_Methods_Annotation {
 	public void search() {
 		System.out.println("Search product on the online shopping platform");
 	}
+	
+	@Test
+	public void checkout() {
+		System.out.println("Checkout product on the online shopping platform");
+	}
 
 	@AfterMethod
 	public void doLogout() {
