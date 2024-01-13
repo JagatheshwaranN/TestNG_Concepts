@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 /**
- * "Assert" - Assertions in TestNG are a way to verify that the expected result
+ * "Assert" - Assertions in TestNG are a way to test that the expected result
  * and the actual result matched or not.
  * <p>
  * Hard assertions will fail the test case and halt the program execution.
@@ -22,7 +22,7 @@ public class BasicAssertionTest {
 
     // Test for String assertion
     @Test
-    public void verifyStringAssertion() {
+    public void testStringAssertion() {
         // Expected title
         String expectedTitle = "TestNG";
 
@@ -37,7 +37,7 @@ public class BasicAssertionTest {
 
     // Test for Integer assertion
     @Test
-    public void verifyIntegerAssertion() {
+    public void testIntegerAssertion() {
         // Expected integer value
         int expectedInt = 100;
 
@@ -52,7 +52,7 @@ public class BasicAssertionTest {
 
     // Test for Long assertion
     @Test
-    public void verifyLongAssertion() {
+    public void testLongAssertion() {
         // Expected long value
         long expectedLong = 123456789L;
 
@@ -67,7 +67,7 @@ public class BasicAssertionTest {
 
     // Test for Float assertion
     @Test
-    public void verifyFloatAssertion() {
+    public void testFloatAssertion() {
         // Expected float value
         float expectedFloat = 10.0f;
 
@@ -82,7 +82,7 @@ public class BasicAssertionTest {
 
     // Test for Double assertion
     @Test
-    public void verifyDoubleAssertion() {
+    public void testDoubleAssertion() {
         // Expected double value
         double expectedDouble = 123.45;
 
@@ -97,7 +97,7 @@ public class BasicAssertionTest {
 
     // Test for Boolean assertion
     @Test
-    public void verifyBooleanAssertion() {
+    public void testBooleanAssertion() {
         // Expected boolean value
         boolean expected = true;
 
@@ -112,7 +112,7 @@ public class BasicAssertionTest {
 
     // Test for Char assertion
     @Test
-    public void verifyCharAssertion() {
+    public void testCharAssertion() {
         // Expected char value
         char expected = 'a';
 

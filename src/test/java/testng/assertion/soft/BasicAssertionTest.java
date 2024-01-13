@@ -9,7 +9,7 @@ import org.testng.asserts.SoftAssert;
  * report all the captured failed test cases after the completion of program
  * execution.
  * <p>
- * The code contains a single test method named verifySoftAssertion, which
+ * The code contains a single test method named testSoftAssertion, which
  * utilizes TestNG's SoftAssert for making multiple assertions without
  * immediately failing the test upon the first assertion failure.
  * <p>
@@ -28,7 +28,7 @@ public class BasicAssertionTest {
 
 	// Test using SoftAssert to perform multiple assertions
 	@Test
-	public void verifySoftAssertion() {
+	public void testSoftAssertion() {
 		// Create a SoftAssert instance to perform multiple assertions
 		SoftAssert softAssert = new SoftAssert();
 
