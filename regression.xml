@@ -3,18 +3,18 @@
 <suite name="Regression Suite">
 	<test thread-count="5" name="Test_Annotation Test">
 		<classes>
-			<class name="testng.features._01_Test_Annotation" />
+			<class name="testng.annotation._01_Test_Annotation" />
 		</classes>
 	</test>
 	<test thread-count="5" name="Before_After_Methods_Annotation Test">
 		<classes>
 			<class
-				name="testng.features._02_Before_After_Methods_Annotation" />
+				name="testng.annotation._02_Before_After_Methods_Annotation" />
 		</classes>
 	</test>
 	<test thread-count="5" name="Before_After_Tests_Annotation Test">
 		<classes>
-			<class name="testng.features._03_Before_After_Tests_Annotation" />
+			<class name="testng.annotation._03_Before_After_Tests_Annotation" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -3,7 +3,7 @@
 <suite name="Functional Suite">
 	<test thread-count="5" name="Test_Annotation Test">
 		<classes>
-			<class name="testng.features._01_Test_Annotation" />
+			<class name="testng.annotation._01_Test_Annotation" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

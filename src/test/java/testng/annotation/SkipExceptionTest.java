@@ -1,4 +1,4 @@
-package testng.features;
+package testng.annotation;
 
 import org.testng.SkipException;
 import org.testng.annotations.Test;

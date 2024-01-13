@@ -1,4 +1,4 @@
-package testng.features;
+package testng.function;
 
 import org.testng.annotations.Test;
 
