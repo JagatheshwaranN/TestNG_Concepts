@@ -1,4 +1,4 @@
-package testng.function;
+package testng.attributes.group;
 
 import org.testng.annotations.Test;
 

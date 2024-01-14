@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Parameterized Suite">
+    <test thread-count="5" name="Parameterization Test1">
+        <parameter name="User" value="John"/>
+        <classes>
+            <class
+                    name="testng.parameter.SuiteLevelParameterTest"/>
+        </classes>
+    </test>
+    <test thread-count="5" name="Parameterization Test2">
+        <parameter name="User" value="Alex"/>
+        <parameter name="Number" value="5"/>
+        <classes>
+            <class
+                    name="testng.parameter.TestLevelParameterTest"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
