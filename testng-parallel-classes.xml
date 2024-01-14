@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Parallel By Classes Suite" parallel="classes">
+    <test thread-count="2" name="Parallel By Classes Test">
+        <parameter name="user" value="Alex"/>
+        <classes>
+            <class
+                    name="testng.parallel.ParallelByMethodsTest"/>
+            <class
+                    name="testng.parallel.ParallelByClassesTest"/>
+        </classes>
+    </test>
+</suite>
