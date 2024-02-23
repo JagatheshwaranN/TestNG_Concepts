@@ -3,18 +3,13 @@
 <suite name="Suite">
 <groups>
 <run>
-<include name="functional"></include>
-<exclude name="regression"></exclude>
+<include name="functional" />
+<exclude name="regression" />
 </run>
 </groups>
 	<test thread-count="5" name="Group Test1">
 		<classes>
-			<class name="testng.annotation._Test_Groups_Demo1" />
-		</classes>
-	</test>
-	<test thread-count="5" name="Group Test2">
-		<classes>
-			<class name="testng.function._Test_Groups_Demo2" />
+			<class name="testng.attributes.group.GroupsTest" />
 		</classes>
 	</test>
 </suite> <!-- Suite -->

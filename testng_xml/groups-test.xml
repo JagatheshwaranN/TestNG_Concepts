@@ -4,21 +4,21 @@
 	<test thread-count="5" name="Group Test1">
 		<groups>
 			<run>
-				<include name="functional"></include>
+				<include name="functional" />
 			</run>
 		</groups>
 		<classes>
-			<class name="testng.annotation._Test_Groups_Demo1" />
+			<class name="testng.attributes.group.GroupsTest" />
 		</classes>
 	</test>
 	<test thread-count="5" name="Group Test2">
 		<groups>
 			<run>
-				<include name="regression"></include>
+				<include name="regression" />
 			</run>
 		</groups>
 		<classes>
-			<class name="testng.function._Test_Groups_Demo2" />
+			<class name="testng.attributes.group.GroupsTest" />
 		</classes>
 	</test>
 </suite> <!-- Suite -->
