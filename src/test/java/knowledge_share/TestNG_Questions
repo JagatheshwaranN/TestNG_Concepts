@@ -1,0 +1,120 @@
+Questions
+=========
+1. What is TestNG?
+TestNG is a testing framework inspired by JUnit and NUnit but introduces some new functionalities that make
+it more powerful and easier to use.
+
+2. What are the advantages of TestNG over JUnit?
+1. TestNG provides support for annotations, such as @BeforeTest, @AfterTest, @BeforeSuite, @AfterSuite, etc.,
+which gives more control over test execution.
+2. TestNG supports parallel execution of tests.
+3. TestNG allows grouping of test cases.
+4. TestNG supports parameterization, which allows running the same test with different data sets.
+
+3. What are the different annotations used in TestNG?
+Some of the commonly used annotations in TestNG are:
+@Test: Marks a method as a test method.
+@BeforeSuite: The annotated method will be run before all tests in this suite have run.
+@AfterSuite: The annotated method will be run after all tests in this suite have run.
+@BeforeTest: The annotated method will be run before any test method belonging to the classes inside
+the <test> tag is run.
+@AfterTest: The annotated method will be run after all the test methods belonging to the classes inside
+the <test> tag have run.
+@BeforeGroups: The list of groups that this configuration method will run before. This method is guaranteed
+to run shortly before the first test method that belongs to any of these groups is invoked.
+@AfterGroups: The list of groups that this configuration method will run after. This method is guaranteed
+to run shortly after the last test method that belongs to any of these groups is invoked.
+@BeforeClass: The annotated method will be run before the first test method in the current class is invoked.
+@AfterClass: The annotated method will be run after all the test methods in the current class have been run.
+@BeforeMethod: The annotated method will be run before each test method.
+@AfterMethod: The annotated method will be run after each test method.
+
+4. How do you perform dependency testing in TestNG?
+TestNG supports the concept of dependency testing through the 'dependsOnMethods' attribute of the @Test
+annotation. By specifying the dependencies between test methods, you can ensure that a particular test
+method runs only after the successful execution of its dependent methods.
+
+5. How can you run test cases in parallel in TestNG?
+TestNG supports parallel execution of test cases by setting the 'parallel' attribute of the <suite> tag
+in the testng.xml file. You can specify parallel execution at different levels such as methods, tests,
+classes, and suites.
+
+6. Explain parameterization in TestNG.
+Parameterization in TestNG allows running the same test method with different sets of data. This can be
+achieved using the 'dataProvider' attribute of the @Test annotation, where you specify the name of the
+data provider method that returns the test data.
+
+7. What is the purpose of listeners in TestNG?
+Listeners are interfaces that allow you to implement custom logic to be notified at specific points
+during test execution. You can use them for logging, reporting, or other actions. They allow you to
+perform certain actions before or after a test method, a test class, a test suite, etc. TestNG provides
+several built-in listeners such as ITestListener, IAnnotationTransformer, ISuiteListener, etc., which
+can be implemented to handle different events during the test execution process.
+
+8. What's the difference between @BeforeTest and @BeforeMethod?
+@BeforeTest runs before all test methods in a <test> tag of a TestNG XML file. @BeforeMethod runs before
+each individual test method in a class.
+
+9. What is the importance of the testng.xml file?
+The testng.xml file is an XML configuration file used to define how TestNG executes tests. It allows you
+to specify suites, test cases, groups, dependencies, parameters, and other settings.
+
+10. What are the functionalities you can achieve using the testng.xml file?
+1. The order of test execution.
+2. Grouping and execution of specific test groups.
+3. Including or excluding test cases.
+4. Setting dependencies between tests.
+5. Passing parameters to test methods.
+
+11. How can you achieve data-driven testing in TestNG?
+Use the @DataProvider annotation to provide test data for a test method. The data provider method returns
+a multidimensional array of data used by the test method for each iteration.
+Data providers in TestNG allow you to pass parameters to test methods. A data provider method supplies data
+to the test method, enabling you to run the same test method with different sets of data. This is particularly
+useful for data-driven testing. You specify the data provider method using the dataProvider attribute of the
+@Test annotation.
+
+12. How can you handle failures in TestNG?
+TestNG provides assertion methods like assertEquals, assertTrue, etc., to verify expected results. Failing
+assertions cause test failures. You can also use exception handling for unexpected errors.
+
+13. Explain the difference between soft assertions and hard assertions in TestNG.
+Hard assertions:
+================
+These are the traditional assertions that stop the test execution as soon as any assertion fails. They
+are invoked using Assert.assertEquals(), Assert.assertTrue(), etc.
+
+Soft assertions:
+================
+Soft assertions do not stop the test execution immediately after a failure. Instead, they collect all
+failures and then throw an assertion error at the end of the test. They are invoked using SoftAssert
+class methods. They are useful when you want to continue executing subsequent steps after encountering
+an assertion failure to gather more information about the test failure.
+
+14. How can you configure TestNG to run tests in a specific order?
+TestNG, by default, runs test methods in lexicographic order (i.e., alphabetical order of method names).
+However, if you want to run tests in a specific order, you can use the priority attribute of the @Test
+annotation. You assign a priority value to each test method, and TestNG executes them in ascending order
+of priority.
+
+15. How can you achieve parallel execution of tests with different data sets in TestNG?
+This requires a combination of techniques:
+1. Use @DataProvider to provide different data sets for the test method.
+2. Set the parallel attribute to true in the @Test annotation.
+3. Use the threadPoolSize attribute in the @Test annotation to specify the number of threads to use for
+parallel execution.
+4. Ensure your test methods are independent and don't share state, as parallel execution can lead to
+concurrency issues.
+
+16. How would you handle a scenario where a test case depends on the successful execution of another test
+case from a different class?
+TestNG doesn't directly support inter-class dependencies. However, you can achieve this using a few
+workarounds:
+1. Listener: Create a custom listener that monitors test execution events. When the first test case
+finishes successfully, update a flag or variable accessible to the second test case.
+2. TestNG Factory: Develop a factory class that generates test instances with pre-populated data from
+the first test case's execution.
+3. External data storage: Use a database or shared file to store the result of the first test case and
+access it in the second test case.
+
+
