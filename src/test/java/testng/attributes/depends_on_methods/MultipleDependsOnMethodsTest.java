@@ -27,7 +27,7 @@ import org.testng.annotations.Test;
  * @author Jagatheshwaran N
  */
 
-public class DependsOnMethodsTest {
+public class MultipleDependsOnMethodsTest {
 
 	// Test method for login
 	@Test

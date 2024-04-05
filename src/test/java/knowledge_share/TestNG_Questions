@@ -5,11 +5,27 @@ TestNG is a testing framework inspired by JUnit and NUnit but introduces some ne
 it more powerful and easier to use.
 
 2. What are the advantages of TestNG over JUnit?
-1. TestNG provides support for annotations, such as @BeforeTest, @AfterTest, @BeforeSuite, @AfterSuite, etc.,
-which gives more control over test execution.
-2. TestNG supports parallel execution of tests.
-3. TestNG allows grouping of test cases.
-4. TestNG supports parameterization, which allows running the same test with different data sets.
+1. Firstly, TestNG is capable of producing reports automatically with all the necessary information such
+as failed tests, passed tests, test execution times, etc.
+2. Secondly, TestNG makes use of annotations such as @BeforeMethod, @Test, etc., which are easily
+understandable as their naming is after their working.
+3. Thirdly, TestNG provides a grouping of methods by which we can group multiple methods as one unit. In
+other words, Grouping performs operations on all the tests in a group at once rather than individually.
+4. Fourthly, TestNG provides a test method parameterization, which means we can provide parameters in the
+TestNG and call the function repeatedly with different values. Moreover, parameterization helps in data-
+driven testing in TestNG.
+5. Fifthly, TestNG provides the prioritization of methods. In other words, by defining the priorities of
+the methods in TestNG, we can alter the default execution sequence of the test methods according to our wish.
+6. In addition to the above, TestNG allows parallel testing, which increases efficiency and improves the
+overall running time of test methods.
+7. With the TestNG framework, you can easily integrate with other tools such as Maven, Jenkins, etc.
+8. Moreover, TestNG provides a feature to run multiple test methods on various browsers to test for cross-
+browser compatibility issues on your website. It is cross-browser testing.
+9. Additionally, TestNG allows us to run the tests separately. So, if you run the tests and only one test
+failed, you can run this test independently in the next execution.
+10. Moreover, TestNG allows the test methods to depend on each other. Its also called Test Dependency in
+TestNG.
+11. Lastly, TestNG provides a bunch of assertion methods for testing more efficiently.
 
 3. What are the different annotations used in TestNG?
 Some of the commonly used annotations in TestNG are:
@@ -60,11 +76,12 @@ The testng.xml file is an XML configuration file used to define how TestNG execu
 to specify suites, test cases, groups, dependencies, parameters, and other settings.
 
 10. What are the functionalities you can achieve using the testng.xml file?
-1. The order of test execution.
-2. Grouping and execution of specific test groups.
-3. Including or excluding test cases.
-4. Setting dependencies between tests.
-5. Passing parameters to test methods.
+We use the XML file in TestNG for many purposes. The TestNG XML file helps us:
+1. To run multiple tests in order in a single execution.
+2. Secondly, it also helps us to include and exclude the test methods and groups.
+3. Thirdly, it also helps us to add dependencies in groups.
+4. Fourthly, it helps to run the test case methods through parameters.
+5. Finally, it assists in the execution of the parallel test execution.
 
 11. How can you achieve data-driven testing in TestNG?
 Use the @DataProvider annotation to provide test data for a test method. The data provider method returns
@@ -117,4 +134,85 @@ the first test case's execution.
 3. External data storage: Use a database or shared file to store the result of the first test case and
 access it in the second test case.
 
+17. How can you handle dynamic test cases or scenarios where the number of tests is not known beforehand?
+TestNG allows you to dynamically generate test cases at runtime using the @Factory annotation. You can
+create a factory method that generates instances of your test class with different configurations or
+parameters. Each generated instance represents a separate test case, and TestNG will execute them
+accordingly. This approach is useful when the number of test cases is not known beforehand or when you
+need to create tests dynamically based on certain conditions or inputs.
+
+18. Re-running Failed Tests?
+1. TestNG Listeners: Implement a custom ITestListener to capture failed test information during execution
+(e.g., test method name, class name).
+testng.xml Configuration: Create a separate testng.xml file listing only the failed tests identified by the
+listener.
+Command-Line Execution: Use the testng -rerun failed.xml command to re-run only the failed tests from the
+captured information.
+
+19. Define the correct order of tags in the TestNG XML file.
+The correct order followed to run the TestNG suite from the XML file is as follows:
+<suite>
+  <test>
+    <classes>
+        <class>
+            <methods>
+            </methods>
+        </class>
+    </classes>
+  </test>
+</suite>
+
+20. What are the types of reports generated in TestNG by default?
+TestNG generates two types of reports by default after the execution of all the test methods finishes.
+They are:
+1. Emailable Reports
+2. Index Reports
+
+21. Where is the emailable report & index report generated and saved in TestNG?
+1. Emailable reports generate under the project folder and test-output subfolder. This report is available
+as "emailable-report.html" by default.
+2. The index report generates under the project folder and test-output subfolder. Moreover, this report is
+available as "index.html" by default.
+
+22. When we declare parameters at both Test and Suite level inside the XML file, which will get the priority?
+When we declare the parameters for the test methods at test level and suite level. Then, TestNG will take the
+parameter defined at the test level instead of Suite level, which indicates that the parameter defined at
+test level takes priority than the suite level.
+
+23. What is mean by Optional Parameter in TestNG?
+Optional parameters are yet another type of parameter which kind of acts like the "default" attribute of the
+switch case in programming languages. So, if no parameter value is specified, the optional parameter value is
+taken. Optional parameters are defined similarly to Parameters (with annotations), but the place they occupy
+is different.
+@Test
+@Parameters({ "Message"})
+public void testTestLevelParameter(@Optional("Have a good day!") String message) {
+    System.out.println("Hello! "+ message);
+}
+
+24. How do you exclude a group from the test execution cycle?
+Excluding a group in TestNG denotes that this particular group refrains from running during the execution,
+and TestNG will ignore it. Additionally, the name of the group that we want to exclude is defined in the
+XML file  by the following syntax:
+<test>
+<groups>
+  <run>
+    <exclude name = "demo">
+    </exclude>
+   </run>
+</groups>
+</test>
+
+25. Can we use regular expression in TestNG groups? Write a demo XML file for the same.
+Yes, regular expressions can be used in TestNG to execute the groups which have some typical pattern in
+their name. For example, if I want to run all the groups with a name starting from "func", then I can write
+the regular expression as func.* in the XML file.
+<test>
+<groups>
+  <run>
+    <include name = "func.*">
+    </include>
+   </run>
+</groups>
+</test>
 
