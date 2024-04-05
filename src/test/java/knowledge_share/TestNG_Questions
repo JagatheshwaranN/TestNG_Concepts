@@ -216,3 +216,9 @@ the regular expression as func.* in the XML file.
 </groups>
 </test>
 
+26. What is the significance of "timeout" in TestNG?
+In TestNG, "timeout" is a parameter that defines the maximum time that a method can take for execution.
+The timeout parameter is handy if the execution time is a constraint during testing, or the tester wants
+to take precautions against the endless execution of tests. We can declare the timeout parameter at:
+1. Suite level: To put a time constraint on all the methods in the suite.
+2. Method level: To put the time constraint on a particular method.
