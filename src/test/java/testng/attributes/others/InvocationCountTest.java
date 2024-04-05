@@ -1,4 +1,4 @@
-package testng.attributes.parallel;
+package testng.attributes.others;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;

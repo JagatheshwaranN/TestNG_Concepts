@@ -19,17 +19,23 @@ import org.testng.annotations.Test;
 public class PriorityTest {
 
 	// Test method for login with priority 1
-	@Test(priority = 1)
+	@Test(priority = -1)
 	public void doLogin() {
 		// Print a message indicating the action being performed
 		System.out.println("Login to the online shopping platform");
 	}
 
-	// Test method for browsing products with priority 2
-	@Test(priority = 2)
+	// Test method for browsing products with priority 0
+	@Test(priority = 0)
 	public void browseProducts() {
 		// Print a message indicating the action being performed
 		System.out.println("Browse and search for products on the online shopping platform");
 	}
 
+	// Test method for checkout with priority 1
+	@Test(priority = 1)
+	public void checkout() {
+		// Checkout product on the online shopping platform
+		System.out.println("Checkout product on the online shopping platform");
+	}
 }

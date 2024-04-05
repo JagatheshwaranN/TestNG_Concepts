@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" time-out="1000">
+	<test thread-count="1" name="Timeout Test">
+		<classes>
+			<class name="testng.attributes.others.TimeoutFromXMLTest" />
+		</classes>
+	</test>
+</suite> <!-- Suite -->

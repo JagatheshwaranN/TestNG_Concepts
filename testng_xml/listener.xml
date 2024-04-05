@@ -3,11 +3,11 @@
 <suite name="Listener Suite">
 	<listeners>
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
-		<listener class-name="testng.listener.CustomListener" />
+		<listener class-name="testng.listener.ITestListenerImplement" />
 	</listeners>
-	<test thread-count="5" name="Listener Test">
+	<test thread-count="1" name="Listener Test">
 		<classes>
-			<class name="testng.listener.ListenerTestDemo" />
+			<class name="testng.listener.SuiteLevelListenerTest" />
 		</classes>
 	</test>
 </suite> <!-- Suite -->
