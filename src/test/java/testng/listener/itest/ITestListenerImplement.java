@@ -1,12 +1,17 @@
-package testng.listener;
+package testng.listener.itest;
 
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 
 /**
- * "ITestListener" - Classes implement the interface org.testng.ITestListener
- * are notified in real time of when a test starts, passes, fails, skips, etc..
+ * In TestNG, ITestListener is an interface that defines methods to listen to events related to
+ * test execution.
+ * TestNG provides this interface as part of its extensibility mechanism, allowing users to
+ * implement custom behavior before, after, or during test execution.
+ * <p>
+ * ITestListener interface includes methods that can be implemented to perform actions based on
+ * different events occurring during the test lifecycle.
  * 
  * @author Jagatheshwaran N
  */
