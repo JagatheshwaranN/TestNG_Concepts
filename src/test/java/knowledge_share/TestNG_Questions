@@ -333,4 +333,79 @@ One should note that if the parent suite contains child suites as well, then the
 before the parent suite. It helps to retrieve the combined results from child suites reflecting onto the
 parent suites.
 
+41. What is IInvokedMethodListener in TestNG?
+IInvokedMethodListener is an interface in TestNG that allows users to define custom behavior for method
+invocation events during test execution. It provides methods to listen to events related to individual
+test method invocation. TestNG invokes these methods before and after each test method is invoked, enabling
+users to perform custom actions or behaviors based on method execution events.
+
+Here are some of the notable methods provided by the IInvokedMethodListener interface:
+beforeInvocation(IInvokedMethod method, ITestResult testResult): This method is invoked before a test method
+is invoked. It provides an IInvokedMethod object representing the method being invoked and an ITestResult
+object representing the test result.
+
+afterInvocation(IInvokedMethod method, ITestResult testResult): This method is invoked after a test method is
+invoked. It provides the same parameters as beforeInvocation.
+
+42. What is IHookable Listeners in TestNG?
+IHookable listener is used to performing some tasks before running a method such as JAAS authentication
+or setting permissions for the test methods etc. Additionally, the IHookable listener interface runs its
+run() method instead of the @Test method whenever found during the execution. This @Test method is although
+passed on and encapsulated in an IHookCallBack object, which can be run by invoking the runTestMethod
+function from the IHookable interface as in IHookable.runTestMethod().
+
+43. What is IConfiguration Listeners in TestNG?
+The IConfigurationListener in TestNG triggers only when the configuration methods pass, fail, or skip.
+The IConfiguration listener has the following methods:
+1. onConfigurationSuccess: The success of the configuration method invokes this method.
+Syntax: void onConfigurationSuccess(ITestResult itr);
+
+2. onConfigurationFailure: The failure of the configuration method invokes this method.
+Syntax: void onConfigurationFailure(ITestResult itr);
+
+3. onConfigurationSkip: This method is invoked when the configuration method is skipped.
+Syntax: void onConfigurationSkip(ITestResult itr);
+
+44. What is IConfigurable Listener in TestNG?
+The IConfiguration listener provides us with a run() method. This method invokes instead of each
+configuration method that we find. The invocation of the configuration method, however, happens when
+we call the callback() function through the IConfigureCallBack parameter.
+Syntax: void run(IConfigureCallBack callback, ITestResult testresult);
+
+45. What is IAnnotationTransformer Listeners in TestNG?
+The IAnnotationTransformer listener, as its name suggests, transforms the annotation provided inside
+the test case code. These annotations transform through the "transform" method available in the listener.
+This method will detect the annotation and then transform it according to the code written inside the
+method. The transform method contains the following parameters:
+
+1. annotation: This is the annotation that was read from your test class.
+2. testClass: I1f the annotation were found in a class, this parameter would then represent the class
+(otherwise null).
+3. testMethod: If the annotation was found on the method, this parameter would then represent the method
+( otherwise null).
+4. testConstructor: If the annotation were found on a constructor, this parameter would then represent
+that constructor (otherwise null).
+
+It is important to note that at least one of the parameters should contain a value other than null,
+i.e., all the parameters cannot be null.
+
+Syntax: void transform( ITestAnnotation annotation, java.lang.Class testClass, java.lang.reflect.Constructor
+testConstructor, java.lang.reflect.method testMethod);
+
+46. What is IExecutionListener in TestNG?
+The IExecutionListener listener monitors the start and the end of a test or a suite. The IExecutionListener
+contains two methods:
+1. onExecutionStart: This method invokes before the test start.
+2. onExecutionFinish: This method invokes after all the tests/suites have finished the execution.
+
+47. What is IMethodInterceptor Listener in TestNG?
+IMethodInterceptor listener alters or modifies the list of tests that will be executed by TestNG. By using
+the IMethodInterceptor listener, we run the intercept method, which returns the list of methods that will
+be run by TestNG. Now the TestNG will run the methods in the same order that returned in the list. The
+IMethodInterceptor listener in TestNG contains only one method:
+
+intercept: This method returns the list of methods that will be executed by TestNG.
+
+
+
 
