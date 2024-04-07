@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
 public class TestAnnotationMethodLevelTest {
 
 	// Test method for searching a product
-	@Test
+	@Test(description = "Search Product on Shopping Platform")
 	public void searchProduct() {
 		// Print a message indicating the action being performed
 		System.out.println("Search product anonymously on the online shopping platform");

@@ -379,7 +379,7 @@ This method will detect the annotation and then transform it according to the co
 method. The transform method contains the following parameters:
 
 1. annotation: This is the annotation that was read from your test class.
-2. testClass: I1f the annotation were found in a class, this parameter would then represent the class
+2. testClass: If the annotation were found in a class, this parameter would then represent the class
 (otherwise null).
 3. testMethod: If the annotation was found on the method, this parameter would then represent the method
 ( otherwise null).
@@ -405,6 +405,14 @@ be run by TestNG. Now the TestNG will run the methods in the same order that ret
 IMethodInterceptor listener in TestNG contains only one method:
 
 intercept: This method returns the list of methods that will be executed by TestNG.
+
+48. What is IRetryAnalyzer Listener in TestNG?
+1. In TestNG, IRetryAnalyzer is an interface that allows users to implement retry logic for failed test cases.
+2. It provides a way to specify custom retry behavior for individual test methods, allowing them to be rerun
+a certain number of times if they fail during execution.
+3. IRetryAnalyzer interface consists of a single method: retry(ITestResult result), which returns a boolean
+value indicating whether the test method should be retried.
+4. The method takes an ITestResult parameter, providing information about the test method execution.
 
 
 

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Retry Suite">
+	<listeners>
+		<listener class-name="testng.listener.iretry.IAnnotationTransformerListenerImplement" />
+	</listeners>
+	<test thread-count="1" name="Listener Test">
+		<classes>
+			<class name="testng.listener.iretry.ClassLevelListenerTest" />
+		</classes>
+	</test>
+</suite> <!-- Suite -->
