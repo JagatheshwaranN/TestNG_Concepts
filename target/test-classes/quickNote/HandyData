@@ -1,0 +1,127 @@
+=====================================================================
+1. Annotations
+==============
+The annotations are listed in the execution order.
+
+@BeforeSuite
+@BeforeTest
+@BeforeClass
+@BeforeMethod
+@Test
+@AfterMethod
+@AfterClass
+@AfterTest
+@AfterSuite
+
+@BeforeGroups
+@AfterGroups
+
+@Factory - It is used to generate the instances for the Test class.
+
+Note:
+=====
+1. @Test method can be used in method level and class level.
+2. We can have any numbers tests when we declare the @Test in class level.
+
+Example
+=======
+@Test
+public class Demo {
+    public void demoTest() {};
+}
+
+public class Demo {
+    @Test
+    public void demoTest() {};
+}
+
+public class HandleFactoryTest {
+    @Factory
+    public Object[] createTestInstance() {
+        Object[] result = new Object[3];
+        for(int i = 0; i < 3; i++) {
+            result[i] = new FactoryDemoTest(i);
+        }
+        return result;
+    }
+}
+
+public class FactoryDemoTest {
+    int id;
+    public FactoryDemoTest(int id) {
+        this.id = id;
+    }
+    @Test
+    public void displayMessage() {
+        System.out.println("Message " + id);
+    }
+}
+=====================================================================
+2. Assertion
+============
+Assertion class is used to handle the hard assertion whereas SoftAssert
+class is used to handle the soft assertion.
+
+In TestNG, there are 2 types of Assertion as below.
+1. Hard Assertion - Will fail and halt the execution.
+2. Soft Assertion - Will capture failure and report at the end of execution.
+
+Hard Assertion
+==============
+Usage
+=====
+Assert.assertEqual(actual, expected);
+
+Methods
+=======
+assertEquals(actual, expected);
+assertNotEquals(actual, expected);
+assertTrue(boolean);
+assertFalse(boolean);
+assertSame(actual, expected);
+assertNotSame(actual, expected);
+assertFail(Msg);
+assertNull(Object);
+assertNotNull(Object);
+
+Soft Assertion
+==============
+Usage
+=====
+SoftAssert softAssert = new SoftAssert();
+
+Methods
+=======
+softAssert.assertEquals(actual, expected);
+softAssert.assertNotEquals(actual, expected);
+softAssert.assertTrue(boolean);
+softAssert.assertFalse(boolean);
+softAssert.assertSame(actual, expected);
+softAssert.assertNotSame(actual, expected);
+softAssert.assertFail(Msg);
+softAssert.assertNull(Object);
+softAssert.assertNotNull(Object);
+softAssert.assertAll();
+=====================================================================
+3. Parameter
+============
+The parameter is used to pass the runtime values to the test methods.
+The parameter can be passed in different levels as below.
+
+1. Test level
+2. Suite level
+
+Usage
+=====
+public class Demo {
+    @Test
+    @Parameters({"name"})
+    public void demoTest(@Optional("John") String name) {};
+}
+
+Note:
+=====
+1. We have something called Optional parameter in TestNG, which is used
+   when we don't pass any values for the actual parameters at runtime.
+2. The parameters are passed from the testNG.xml files.
+=====================================================================
