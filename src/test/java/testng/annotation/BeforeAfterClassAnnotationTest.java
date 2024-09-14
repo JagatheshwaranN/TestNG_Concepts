@@ -16,13 +16,13 @@ import org.testng.annotations.Test;
  * In TestNG, @BeforeClass and @AfterClass annotations are used to mark methods
  * that should run once before and after all the test methods in a test class,
  * respectively. These annotations are particularly useful for performing setup
- * and teardown tasks that are common to the entire test class.
+ * and tear down tasks that are common to the entire test class.
  * <p>
  * Common use cases for @BeforeClass include setting up resources, initializing
  * shared data, or any one-time setup required for the entire test class.
  * <p>
  * Common use cases for @AfterClass include performing cleanup tasks, releasing
- * resources, or any teardown actions required after all the test methods in the
+ * resources, or any tear down actions required after all the test methods in the
  * class have run.
  *
  * @author Jagatheshwaran N

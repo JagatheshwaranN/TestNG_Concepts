@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
  * Hard assertions will fail the test case and halt the program execution.
  * <p>
  * The code contains three test methods, each demonstrating different types of
- * assertions using TestNG's Assert class.
+ * assertions using TestNG Assert class.
  * <p>
  * Each test method focuses on showcasing a specific type of assertion available
  * in TestNG. These assertions are fundamental for creating robust and expressive
@@ -113,7 +113,7 @@ public class MediumAssertionTest {
 		String text = "testNG";
 
 		// Assert that the object is not null (should pass)
-		Assert.assertNotNull(text, "Text is not null");
+		Assert.assertNotNull(text, "Text is null");
 	}
 
 }

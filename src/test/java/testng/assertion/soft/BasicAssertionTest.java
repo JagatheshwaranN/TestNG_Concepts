@@ -10,7 +10,7 @@ import org.testng.asserts.SoftAssert;
  * execution.
  * <p>
  * The code contains a single test method named testSoftAssertion, which
- * utilizes TestNG's SoftAssert for making multiple assertions without
+ * utilizes TestNG SoftAssert for making multiple assertions without
  * immediately failing the test upon the first assertion failure.
  * <p>
  * This test method is useful when you want to capture multiple assertion

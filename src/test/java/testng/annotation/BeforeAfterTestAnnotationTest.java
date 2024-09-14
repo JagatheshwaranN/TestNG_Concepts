@@ -24,7 +24,7 @@ import org.testng.annotations.Test;
  * entire set of tests within a <test> tag.
  * <p>
  * Common use cases for @AfterTest include performing cleanup tasks, releasing
- * resources, or any teardown actions required after all the tests within a
+ * resources, or any tear down actions required after all the tests within a
  * <test> tag have run.
  *
  * @author Jagatheshwaran N

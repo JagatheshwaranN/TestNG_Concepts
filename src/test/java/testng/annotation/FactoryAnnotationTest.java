@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
  * of test classes or test cases at runtime. This is particularly useful when you need to dynamically
  * generate test cases based on certain conditions, parameters, or configurations.
  * <p>
- * The Test class demonstrates the usage of TestNG's @Factory annotation to dynamically generate
+ * The Test class demonstrates the usage of TestNG @Factory annotation to dynamically generate
  * and execute test instances. The DynamicTest class represents the dynamic test instances with
  * each having its unique ID. When TestNG runs, it invokes the factory method to create instances
  * of DynamicTest, and each instance executes its test() method, printing a message indicating its

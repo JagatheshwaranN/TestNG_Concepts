@@ -48,7 +48,7 @@ public class BeforeAfterGroupsAnnotationTest {
         System.out.println("Relax yourself by taking massage in the Spa at Shopping Mall");
     }
 
-    // Teardown method executed after all test methods in the "functional" group for leaving the Shopping Mall
+    // Tear down method executed after all test methods in the "functional" group for leaving the Shopping Mall
     @AfterGroups(groups = {"functional"})
     public void exitMall() {
         // Print a message indicating the action being performed

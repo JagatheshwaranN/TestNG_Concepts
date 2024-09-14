@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
  * and using assertions to validate expected and actual values.
  * <p>
  * Each test method follows a similar structure: defining expected and actual
- * values and using TestNG's Assert.assertEquals to perform the assertions.
+ * values and using TestNGs Assert.assertEquals to perform the assertions.
  * The tests are designed to check the equality of values for different data types.
  *
  * @author Jagatheshwaran N
