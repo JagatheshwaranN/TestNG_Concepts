@@ -23,7 +23,7 @@ import org.testng.annotations.Test;
  * <p>
  * The test class contains three test methods: doLogin, browseProducts, and
  * doLogout.
- * The doLogin method is intentionally designed to fail using Assert.fail for
+ * The doLogin method is intentionally designed to fail using Assert. Fail for
  * demonstration purposes.
  * The browseProducts method is marked with dependsOnMethods = "doLogin" and
  * alwaysRun = true. This means that it depends on the success of doLogin, and
@@ -36,6 +36,7 @@ import org.testng.annotations.Test;
  * @author Jagatheshwaran N
  */
 
+@SuppressWarnings("All")
 public class DependsOnMethodWithSoftDependencyTest {
 
 	// Test method for user login

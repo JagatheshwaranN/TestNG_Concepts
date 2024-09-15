@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
  * your test will not be invoked and marked as a SKIP in the report.
  * <p>
  * The test class contains three test methods: doLogin, browseProducts, and doLogout.
- * The doLogin method is intentionally designed to fail using Assert.fail for
+ * The doLogin method is intentionally designed to fail using Assert.Fail for
  * demonstration purposes.
  * The browseProducts method is marked with dependsOnMethods = "doLogin", indicating
  * that it depends on the success of the doLogin method. It will only be executed if
@@ -29,6 +29,7 @@ import org.testng.annotations.Test;
  * @author Jagatheshwaran N
  */
 
+@SuppressWarnings("All")
 public class DependsOnMethodWithHardDependencyTest {
 
 	// Test method for user login

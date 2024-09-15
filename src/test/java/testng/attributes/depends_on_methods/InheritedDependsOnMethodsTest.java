@@ -22,7 +22,7 @@ import org.testng.annotations.Test;
  * The code exemplifies the synergy between TestNG annotations and inheritance to
  * construct a coherent test suite. In the superclass, a method facilitates logging
  * in, while the subclass inherits this functionality along with additional test
- * methods for browsing products and logging out. TestNG's dependsOnMethods attribute
+ * methods for browsing products and logging out. TestNG dependsOnMethods attribute
  * ensures precise sequencing of test execution, adhering to defined dependencies.
  * This arrangement showcases the power of inheritance in TestNG, allowing for the
  * reuse of shared test methods across various test cases while preserving their
@@ -31,6 +31,7 @@ import org.testng.annotations.Test;
  * @author Jagatheshwaran N
  */
 
+@SuppressWarnings("All")
 public class InheritedDependsOnMethodsTest extends Superclass {
 
 	// Test method for browsing products, depends on 'doLogin'
@@ -56,6 +57,7 @@ class Superclass {
 	public void doLogin() {
 		// Print a message indicating the action being performed
 		System.out.println("Login to the online shopping platform");
+		Assert.fail("Explicitly failing the testcase");
 	}
 
 }

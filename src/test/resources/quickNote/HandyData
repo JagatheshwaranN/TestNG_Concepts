@@ -129,3 +129,40 @@ Note:
    when we don't pass any values for the actual parameters at runtime.
 2. The parameters are passed from the testNG.xml files.
 =====================================================================
+4. Attributes
+=============
+The dependsOnMethod attribute is used to make the testcase depend on
+other testcase. We can have multiple as well as single dependsOnMethod
+in a code.
+
+Types of dependsOnMethod
+1. Hard Dependency
+2. Soft Dependency
+
+Usage
+=====
+public class Demo {
+
+@Test
+public void test1() {};
+
+@Test(dependsOnMethod="test1", alwaysRun=true)
+public void test2() {};
+
+@Test(dependsOnMethod={"test1", "test2")
+public void test3() {};
+}
+
+Note:
+=====
+1. alwaysRun=true attribute is used to run the testcase even if the
+   testcase depend on method is failed.
+2. In Inherited dependsOnMethod, failing of the method which other test
+   methods are depends on, will not ignored and executed as usual. It is
+   implemented between two classes.
+3. In normal dependsOnMethod, failing of the method whom other methods
+   are depends on will be ignored and not executed.
+4. In a class, if we have test methods with dependsOnMethod attribute
+   and normal test methods. The execution of normal test methods takes
+   precedence over the dependsOnMethod attribute test methods.
+=====================================================================
