@@ -16,14 +16,18 @@ import org.testng.annotations.Test;
  * <p>
  * The test class contains three methods annotated with @BeforeTest, @Test, and
  * @AfterTest.
+ * <p>
  * The doLogin method is a setup method that simulates logging in before the tests.
+ * <p>
  * The browseProducts method belongs to the "browse" group and simulates browsing
  * products.
+ * <p>
  * The browse and checkout methods are defined and the checked method marked with
  * depends-on browse method in the testNG.xml config file, indicating that it depends
  * on the success of the "browse" group. It will only be executed if the group "browse"
  * (containing browseProducts) succeeds.
- * The doLogout method is a teardown method that simulates logging out after the
+ * <p>
+ * The doLogout method is a tear down method that simulates logging out after the
  * tests.
  *
  * @author Jagatheshwaran N
@@ -43,6 +47,7 @@ public class GroupDependenciesTest {
 	public void browse() {
 		// Browse and search for products on the online shopping platform
 		System.out.println("Browse and search for products on the online shopping platform");
+		// Assert.fail("Explicitly failing the test.");
 	}
 
 	// Test method that depends on the success of the "browse" group

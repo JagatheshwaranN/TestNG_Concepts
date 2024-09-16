@@ -22,7 +22,7 @@ import org.testng.annotations.Test;
  * The checkout method is marked with dependsOnGroups = {"browse"}, indicating that
  * it depends on the success of the "browse" group. It will only be executed if the
  * group "browse" (containing browseProducts) succeeds.
- * The doLogout method is a teardown method that simulates logging out after the
+ * The doLogout method is a tear down method that simulates logging out after the
  * tests.
  *
  * @author Jagatheshwaran N

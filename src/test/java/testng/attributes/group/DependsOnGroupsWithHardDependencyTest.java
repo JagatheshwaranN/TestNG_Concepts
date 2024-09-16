@@ -21,12 +21,15 @@ import org.testng.annotations.Test;
  * The test class contains three methods annotated with @BeforeTest, @Test, and
  * @AfterTest.
  * The doLogin method is a setup method that simulates logging in before the tests.
+ * <p>
  * The browseProducts method belongs to the "browse" group and simulates browsing
  * products, intentionally designed to fail for demonstration purposes.
+ * <p>
  * The checkout method is marked with dependsOnGroups = {"browse"}, indicating that
  * it depends on the success of the "browse" group. It will only be executed if the
  * group "browse" (containing browseProducts) succeeds.
- * The doLogout method is a teardown method that simulates logging out after the
+ * <p>
+ * The doLogout method is a tear down method that simulates logging out after the
  * tests.
  *
  * @author Jagatheshwaran N
