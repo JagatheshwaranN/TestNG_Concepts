@@ -173,7 +173,7 @@ Note:
 2. DependsOnGroups
 ==================
 The dependsOnGroups attribute is used to make the testcase depend on
-other testcase. We can have multiple as well as single dependsOnMethod
+other testcase. We can have multiple as well as single dependsOnGroups
 in a code.
 
 Types of dependsOnGroups
@@ -198,16 +198,30 @@ public void test3() {};
 Note:
 =====
 1. alwaysRun=true attribute is used to run the testcase even if the
-   testcase depend on method is failed.
+   testcase depend on groups is failed.
 2. Group dependency can be provided in test class and testNG.file.
    Also, the Group dependency can be mentioned in both suite and test
    level. We can include / exclude Groups from execution.
-3. In Inherited dependsOnMethod, failing of the method which other test
-   methods are depends on, will not ignored and executed as usual. If it
-   is implemented between two classes.
-4. In normal dependsOnMethod, failing of the method whom other methods
-   are depends on will be ignored and not executed.
-5. In a class, if we have test methods with dependsOnGroups attribute
+3. In a class, if we have test methods with dependsOnGroups attribute
    and normal test methods. The execution of normal test methods takes
    precedence over the dependsOnGroups attribute test methods.
+4. Group dependency can be provided in testNG file under Groups >
+   Dependencies > Group Tag. Also, Include / Exclude can be provided
+   under Groups > Run > Include / Exclude Tag.
+
+3. Others
+=========
+1. enable = false => Ignore / disable the test method from execution.
+2. expectedExceptions = ArithmeticException.class => Identifies the
+   expected exception and throws the same.
+3. Priority = 1 => Provides the order of execution for the test method.
+4. timeOut = 1000 [ms] => It indicates the test method should run within
+   1 second / it will be considered ad fail. It can configured in both
+   class level and testNG.xml file level.
+5. SkipException => It is used to Skip the test method from execution.
+6. invocationCount = 5 => It is used to invoke / call the test method
+   provided number of times.
+7. threadPoolSize = 2 => It is used along with invocationCount, when
+   the test methods is called configured number of times, it indicates
+   how many threads can be used for execution.
 =====================================================================

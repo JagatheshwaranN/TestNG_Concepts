@@ -5,9 +5,10 @@ import org.testng.annotations.Test;
 /**
  * The Test class defines a test method calculate() that tests for an expected ArithmeticException
  * by intentionally performing a calculation that will result in such an exception. This demonstrates
- * how TestNG's expectedExceptions attribute can be used to handle and validate expected exceptions
+ * how TestNGs expectedExceptions attribute can be used to handle and validate expected exceptions
  * in test methods.
  */
+@SuppressWarnings("All")
 public class ExceptionTest {
 
     @Test(priority = 1, expectedExceptions = ArithmeticException.class)

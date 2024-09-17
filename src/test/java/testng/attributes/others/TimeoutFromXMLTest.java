@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
  * for execution. The timeout parameter is handy if the execution time is a constraint during
  * testing, or the tester wants to take precautions against the endless execution of tests.
  * <p>
- * The code snippet demonstrates how to set a timeout for a test method using TestNG's @Test
+ * The code snippet demonstrates how to set a timeout for a test method using TestNG @Test
  * annotation. In this example, the doLogin() method is expected to complete within 1 second
  * (1000 milliseconds). If the method exceeds this time limit, it will be considered failed.
  * This feature is useful for ensuring that test methods do not hang indefinitely, allowing
