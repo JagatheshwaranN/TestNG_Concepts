@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 /**
  * "DataProvider" - A Data Provider is a method on your class that returns an
- * array of array of objects.The method is annotated with @DataProvider.
+ * array of objects.The method is annotated with @DataProvider.
  * <p>
  * A @Test method specifies its Data Provider with the dataProvider attribute.
  * This name must correspond to a method in the same class annotated

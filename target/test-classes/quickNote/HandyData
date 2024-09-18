@@ -216,7 +216,7 @@ Note:
    expected exception and throws the same.
 3. Priority = 1 => Provides the order of execution for the test method.
 4. timeOut = 1000 [ms] => It indicates the test method should run within
-   1 second / it will be considered ad fail. It can configured in both
+   1 second / it will be considered as fail. It can configured in both
    class level and testNG.xml file level.
 5. SkipException => It is used to Skip the test method from execution.
 6. invocationCount = 5 => It is used to invoke / call the test method
@@ -224,4 +224,41 @@ Note:
 7. threadPoolSize = 2 => It is used along with invocationCount, when
    the test methods is called configured number of times, it indicates
    how many threads can be used for execution.
+=====================================================================
+5. DataProvider
+===============
+DataProvider is used to provide the test data to the test methods. It
+is used for data driven testing. DataProvider can be used with parallel
+feature.
+
+DataProvider can be configured in 2 ways.
+1. In test class
+2. From DataProvider class
+
+Note:
+=====
+DataProvider returns the data as Object.
+
+Usage
+=====
+public class Demo {
+
+@Test(dataProvider = "data")
+public void test1() {};
+
+@DataProvider
+public Object[][] data() {};
+}
+
+public class Demo {
+
+@Test(dataProvider = "data", dataProviderClass = DataSupplier.class)
+public void test1() {};
+}
+
+class DataSupplier {
+
+@DataProvider
+public Object[][] data() {};
+}
 =====================================================================

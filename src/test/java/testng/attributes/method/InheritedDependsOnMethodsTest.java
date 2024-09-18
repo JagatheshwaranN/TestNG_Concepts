@@ -1,4 +1,4 @@
-package testng.attributes.depends_on_methods;
+package testng.attributes.method;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

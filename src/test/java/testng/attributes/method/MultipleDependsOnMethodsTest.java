@@ -1,4 +1,4 @@
-package testng.attributes.depends_on_methods;
+package testng.attributes.method;
 
 import org.testng.annotations.Test;
 
@@ -20,14 +20,14 @@ import org.testng.annotations.Test;
  * <p>
  * The test class demonstrates the sequencing of test methods by specifying
  * dependencies using the dependsOnMethods attribute. The doLogout method will
- * only be executed if browseProducts methods complete successfully. This allows
- * for better control over the order of test execution in scenarios where certain
- * actions depend on the successful completion of others.
+ * only be executed if both doLogin and browseProducts methods complete
+ * successfully. This allows for better control over the order of test execution
+ * in scenarios where certain actions depend on the successful completion of others.
  * 
  * @author Jagatheshwaran N
  */
 
-public class SingleDependsOnMethodsTest {
+public class MultipleDependsOnMethodsTest {
 
 	// Test method for login
 	@Test
@@ -43,8 +43,8 @@ public class SingleDependsOnMethodsTest {
 		System.out.println("Browse and search for products on the online shopping platform");
 	}
 
-	// Test method for logout, depends on 'browseProducts'
-	@Test(dependsOnMethods = { "browseProducts" })
+	// Test method for logout, depends on both 'doLogin' and 'browseProducts'
+	@Test(dependsOnMethods = { "doLogin", "browseProducts" })
 	public void doLogout() {
 		// Print a message indicating the action being performed
 		System.out.println("Logout from the online shopping platform");

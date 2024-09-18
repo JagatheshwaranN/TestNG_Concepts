@@ -1,4 +1,4 @@
-package testng.attributes.depends_on_methods;
+package testng.attributes.method;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -13,24 +13,31 @@ import org.testng.annotations.Test;
  * it indicates that the test method should only be executed if the specified
  * methods, referred to as its dependencies, have successfully passed.
  * <p>
- * Hard Dependency, If at least one failure occurred in your test dependencies,
- * your test will not be invoked and marked as a SKIP in the report.
+ * Soft Dependency, Your test will always be run after the methods your test
+ * depends on, even if some of them have failed. This is useful when you just
+ * want to make sure that your test methods are run in a certain order, but
+ * their success doesn't really depend on the success of others.
  * <p>
- * The test class contains three test methods: doLogin, browseProducts, and doLogout.
- * The doLogin method is intentionally designed to fail using Assert.Fail for
+ * A soft dependency is obtained by adding "alwaysRun=true" in your @Test
+ * annotation.
+ * <p>
+ * The test class contains three test methods: doLogin, browseProducts, and
+ * doLogout.
+ * The doLogin method is intentionally designed to fail using Assert. Fail for
  * demonstration purposes.
- * The browseProducts method is marked with dependsOnMethods = "doLogin", indicating
- * that it depends on the success of the doLogin method. It will only be executed if
- * doLogin succeeds.
- * The doLogout method is marked with dependsOnMethods = { "browseProducts" },
- * indicating that it depends on the success of the browseProducts method. It will
- * only be executed if browseProducts succeeds.
- *
+ * The browseProducts method is marked with dependsOnMethods = "doLogin" and
+ * alwaysRun = true. This means that it depends on the success of doLogin, and
+ * the alwaysRun attribute ensures that it will be executed even if its
+ * dependencies fail.
+ * The doLogout method is marked with dependsOnMethods = { "doLogin",
+ * "browseProducts" }, indicating that it depends on the success of both doLogin
+ * and browseProducts. It will only be executed if both dependencies succeed
+ * 
  * @author Jagatheshwaran N
  */
 
 @SuppressWarnings("All")
-public class DependsOnMethodWithHardDependencyTest {
+public class DependsOnMethodWithSoftDependencyTest {
 
 	// Test method for user login
 	@Test
@@ -43,18 +50,17 @@ public class DependsOnMethodWithHardDependencyTest {
 	}
 
 	// Test method that depends on the success of "doLogin"
-	@Test(dependsOnMethods = "doLogin")
+	@Test(dependsOnMethods = "doLogin", alwaysRun = true)
 	public void browseProducts() {
 		// Browse and search for products on the online shopping platform
 		System.out.println("Browse and search for products on the online shopping platform");
 	}
 
-	// Test method that depends on the success of "browseProducts"
-	@Test(dependsOnMethods = { "browseProducts" })
+	// Test method that depends on the success of "doLogin" and "browseProducts"
+	@Test(dependsOnMethods = { "doLogin", "browseProducts" })
 	public void doLogout() {
 		// Logout from the online shopping platform
 		System.out.println("Logout from the online shopping platform");
 	}
 
 }
-
