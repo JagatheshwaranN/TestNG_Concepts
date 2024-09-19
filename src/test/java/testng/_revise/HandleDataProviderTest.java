@@ -8,10 +8,10 @@ public class HandleDataProviderTest {
 
     @Test(dataProvider = "getDisplayData")
     public static void displayDetails(String name, int age) {
-        System.out.println(name + " " + age);
+        System.out.println(Thread.currentThread().getName() + " - " + name + " " + age);
     }
 
-    @DataProvider
+    @DataProvider(parallel = true)
     public static Object[][] getDisplayData() {
         return new Object[][]{{"John", 25}, {"Alex", 30}};
     }

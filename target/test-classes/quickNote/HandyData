@@ -233,7 +233,7 @@ feature.
 
 DataProvider can be configured in 2 ways.
 1. In test class
-2. From DataProvider class
+2. From DataProvider class [We can customize the use of DataProvider]
 
 Note:
 =====
@@ -261,4 +261,25 @@ class DataSupplier {
 @DataProvider
 public Object[][] data() {};
 }
+=====================================================================
+6. Parallel Execution
+=====================
+In TestNG, parallel execution allows the tests to run concurrently,
+improving efficiency and reducing execution time.
+
+Types
+=====
+1. By Test
+2. By Methods
+3. By Instances
+4. By Classes
+
+Parallel by Test: Multiple <test> blocks run in parallel.
+
+Parallel by Method: Each test method in a class runs in parallel.
+
+Parallel by Instance: Multiple instances of a test class run in parallel.
+
+Parallel by Class: Different classes run in parallel, but their methods
+run sequentially within the class.
 =====================================================================
