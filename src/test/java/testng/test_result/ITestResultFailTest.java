@@ -15,6 +15,7 @@ import org.testng.annotations.Test;
  *
  * @author Jagatheshwaran N
  */
+@SuppressWarnings("All")
 public class ITestResultFailTest {
 
     // Test method intentionally failing by asserting false

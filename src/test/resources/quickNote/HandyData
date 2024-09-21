@@ -275,11 +275,47 @@ Types
 4. By Classes
 
 Parallel by Test: Multiple <test> blocks run in parallel.
-
 Parallel by Method: Each test method in a class runs in parallel.
-
 Parallel by Instance: Multiple instances of a test class run in parallel.
-
 Parallel by Class: Different classes run in parallel, but their methods
 run sequentially within the class.
+=====================================================================
+7. Test Result
+==============
+In TestNG, ITestResult interface is used to capture the test method
+status, and report it as success, failure or skip. It is useful in
+reporting purposes.
+
+Usage
+=====
+public void(ITestResult result) {
+    if(ITestResult.SUCCESS == result.getStatus()) {
+        System.out.println(result.getName() + " is passed!");
+    }
+}
+=====================================================================
+8. Listeners
+============
+1. ITestListener
+================
+In TestNG, ITestListener is an interface that defines methods to listen
+to events related to the test execution.
+
+Types
+=====
+1. Class Level (Implemented in class level using @Listeners annotation)
+2. Suite Level (Implemented in suite level from TestNG.xml file)
+
+2. ISuiteListener
+=================
+ISuiteListener is an interface in TestNG that allows users to define
+custom behavior for suite-level events. It provides methods to listen
+to events related to test suite execution.
+
+3. IInvokedMethodListener
+=========================
+IInvokedMethodListener is an interface in TestNG that allows users to
+define custom behavior for method invocation events during test execution.
+It provides methods to listen to events related to individual test
+method invocation.
 =====================================================================

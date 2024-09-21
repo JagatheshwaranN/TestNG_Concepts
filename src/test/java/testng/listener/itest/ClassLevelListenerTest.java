@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
  *
  * @author Jagatheshwaran N
  */
+@SuppressWarnings("All")
 @Listeners(ITestListenerImplement.class)
 public class ClassLevelListenerTest {
 

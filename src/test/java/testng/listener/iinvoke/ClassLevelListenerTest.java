@@ -1,12 +1,12 @@
 package testng.listener.iinvoke;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 /**
  * The ClassLevelListenerTest class represents a set of test methods related to visiting a
  * shopping mall, and the @Listeners annotation associates a custom test listener
- * (IReportListenerImplement) with this class to capture and handle test events during execution.
+ * (IInvokeMethodListenerImplement) with this class to capture and handle test events during
+ * execution.
  *
  * @author Jagatheshwaran N
  */
