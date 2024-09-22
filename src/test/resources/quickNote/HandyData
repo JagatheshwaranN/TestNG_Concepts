@@ -318,4 +318,36 @@ IInvokedMethodListener is an interface in TestNG that allows users to
 define custom behavior for method invocation events during test execution.
 It provides methods to listen to events related to individual test
 method invocation.
+
+4. IExecutionListener
+=====================
+IExecutionListener is an interface in TestNG is to capture and handle
+events occurring before and after the execution of the entire test suite.
+
+5. IHookableListener
+====================
+IHookableListener is an interface in TestNG can be used to intercept
+test method execution and customize the behavior based on certain
+conditions.
+
+6. IMethodInterceptor
+=====================
+IMethodInterceptor is an interface that allows users to intercept and
+modify the test methods that are about to be executed. It provides a way
+to dynamically change the test method execution order or filter out
+certain test methods based on specific criteria.
+
+7. IReporter
+============
+IReporter is an interface in TestNG that allows users to implement custom
+reporters to generate test reports. Users can implement this interface to
+customize the reporting behavior for TestNG.
+
+8. IRetryAnalyzer
+=================
+IRetryAnalyzer is an interface in TestNG that allows users to implement
+retry logic for failed test cases. It provides a way to specify custom
+retry behavior for individual test methods, allowing them to be rerun a
+certain number of times if they fail during execution.
+It is used along with IAnnotationTransformer Listener Interface.
 =====================================================================

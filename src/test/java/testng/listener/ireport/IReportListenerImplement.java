@@ -27,14 +27,14 @@ public class IReportListenerImplement implements IReporter {
     @Override
     public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
 
-        for(ISuite suite: suites){
+        for (ISuite suite : suites) {
             String suiteName = suite.getName();
             Map<String, ISuiteResult> suiteResultMap = suite.getResults();
-            for(ISuiteResult suiteResult : suiteResultMap.values()){
+            for (ISuiteResult suiteResult : suiteResultMap.values()) {
                 ITestContext testContext = suiteResult.getTestContext();
-                System.out.println("Passed Tests From Suite : "+suiteName +" is "+testContext.getPassedTests().getAllResults().size());
-                System.out.println("Failed Tests From Suite : "+suiteName +" is "+testContext.getFailedTests().getAllResults().size());
-                System.out.println("Skipped Tests From Suite : "+suiteName +" is "+testContext.getSkippedTests().getAllResults().size());
+                System.out.println("Passed Tests From Suite : " + suiteName + " is " + testContext.getPassedTests().getAllResults().size());
+                System.out.println("Failed Tests From Suite : " + suiteName + " is " + testContext.getFailedTests().getAllResults().size());
+                System.out.println("Skipped Tests From Suite : " + suiteName + " is " + testContext.getSkippedTests().getAllResults().size());
             }
 
         }
