@@ -253,7 +253,7 @@ A tester can write any type of exception here instead of numberFormatException.
 31. Can we disable a test in TestNG? If so, explain how?
 Yes, disabling a test can be achieved in TestNG. Once we disable a test, it will not run in the next
 execution cycle. Moreover, we accomplish this by using the "enabled" attribute.
-Syntax: @Test (enabled = False)
+Syntax: @Test (enabled = false)
 
 32. Can we give a negative priority in TestNG?
 Negative priorities are acceptable in TestNG. However, you can provide an integer value to the priority

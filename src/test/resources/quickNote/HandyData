@@ -350,4 +350,34 @@ retry logic for failed test cases. It provides a way to specify custom
 retry behavior for individual test methods, allowing them to be rerun a
 certain number of times if they fail during execution.
 It is used along with IAnnotationTransformer Listener Interface.
-=====================================================================
+==========================================================================================
+TestNG
+======
+1. TestNG is an test execution framework inspired from Junit and Nunit.
+2. Advantages - Generate reports, More annotations for test customization,
+   Grouping of tests, Parameterization, DataProvider, Priorities, Parallel
+   execution, Easy integration with Maven, Jenkins, Dependency between tests,
+   bunch of assertions.
+3. Parallel execution can be configured in the suite xml file. Parallel execution
+   at levels is allowed such as methods, tests, classes and instance.
+4. Listeners are interfaces that allows you to implement custom logic to be used
+   during test execution. We can use them logging, reporting, or other actions.
+   They allow you to perform certain actions before / after - tests / methods /
+   classes. There are several listeners available in TestNG. For example,
+   ITestListener, and ISuiteListener, etc.
+5. The testng.xml file is an XML configuration file used to define how TestNG
+   executes tests. It allows you to specify suites, test cases, groups, dependencies,
+   parameters, and other settings.
+6. Assertion Types - Hard Assertion and Soft Assertion. Hard Assertion stop the execution
+   when fail occurred whereas Soft Assertion continues the execution and throw the error
+   at the end of the execution.
+7. We can dynamically generate the testcases at runtime using the @Factory annotation.
+8. TestNG generate 2 reports after the execution - Emailable report and index report.
+9. Optional Parameter is a type of parameter, which is used to set the default value
+   when the actual parameter value is not passed.
+10. We can use Regex pattern when we specify group name in suite xml file.
+11. InvocationCount is an attribute which defines the number of times the test methods
+    should run in single execution.
+12. The Reporter class in TestNG logs the tester defined messages into the reports.
+==========================================================================================
+
